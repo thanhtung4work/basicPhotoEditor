@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Photo Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Simple JS Photo editor</h1>
+  <div class="wrapper">
+    <div class="editor">
+      <div class="filter">
+        <label for="blur">Blur</label>
+        <input type="range" name="blur" id="blur" value="0" min="0" max="10" step="1" class="slider">
+      </div>
+      <div class="filter">
+        <label for="constrast">Constrast</label>
+        <input type="range" name="constrast" id="constrast" value="100" min="0" max="200" step="1" class="slider">
+      </div>
+      <div class="filter">
+        <label for="hue-rotate">Hue-Rotate</label>
+        <input type="range" name="hue-rotate" id="hue-rotate" value="0" min="0" max="360" step="5" class="slider">
+      </div>
+      <div class="filter">
+        <label for="sepia">Sepia</label>
+        <input type="range" name="sepia" id="sepia" value="0" min="0" max="100" step="1" class="slider">
+      </div>
+      <div class="filter">
+        <label for="saturation">Saturation</label>
+        <input type="range" name="saturation" id="saturation" value="100" min="0" max="200" step="1" class="slider">
+      </div>
+      <div class="flipSelections">
+        <div class="flipSelection">
+          <input type="radio" name="flip" id="no-flip" checked>
+          <label for="no-flip">No Flip</label>
+        </div>
+        <div class="flipSelection">
+          <input type="radio" name="flip" id="v-flip">
+          <label for="v-flip">Flip vertically</label>
+        </div>
+        <div class="flipSelection">
+          <input type="radio" name="flip" id="h-flip">
+          <label for="h-flip">Flip horizontally</label>
+        </div>
+      </div>
+    </div>
+    <div class="imageGroup">
+      <figure class="imageContainer">
+        <img src="placeholder.jpg" alt="" id="chosenImg">
+      </figure>
+      <input type="file" name="uploadButton" id="uploadButton" accept="Image/*">
+      <label for="uploadButton">Choose your image</label>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

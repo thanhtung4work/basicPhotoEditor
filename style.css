@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(170, 170, 255);
+  padding: 4vw;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 30px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 20px 20px rgba(10, 10, 10, 0.5);
+  border-radius: 5px;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.editor {
+  flex: 3;
+  padding: 20px 10px;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 40px;
+}
+.editor label {
+  font-weight: 500;
+  font-size: 18px;
+  color: rgba(10, 10, 10, 1);
+}
+.editor input[type="range"] {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.flipSelections {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flipSelection {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  margin-top: 10px;
+}
+
+.imageGroup {
+  flex: 7;
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.imageGroup img {
+  display: block;
+  max-width: calc(100% - 2vmin);
+  max-height: 50vmin;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgba(10, 10, 10, 0.5);
+}
+.imageGroup input[type="file"] {
+  display: none;
+}
+.imageGroup label {
+  display: block;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  background-color: rgb(120, 120, 255);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 720px) {
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .editor {
+    flex: 1;
+    gap: 10px;
+  }
+
+  .imageGroup {
+    flex: 1;
+  }
+}
